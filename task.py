@@ -1,4 +1,4 @@
-type = ""
+taskType = ""
 ticketNumber = 0
 location = ""
 issue = ""
@@ -7,8 +7,8 @@ status = ""
 
 # Setters
 def setType(newType):
-    global type
-    type = newType
+    global taskType
+    taskType = newType
 def setTicketNumber(newTicketNumber):
     global ticketNumber
     ticketNumber = newTicketNumber
@@ -24,8 +24,8 @@ def setStatus(newStatus):
 
 # Getters
 def getType():
-    global type
-    return type
+    global taskType
+    return taskType
 def getTicketNumber():
     global ticketNumber
     return ticketNumber
