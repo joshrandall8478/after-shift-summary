@@ -3,101 +3,52 @@ from tkinter import *
 from tkinter.ttk import *
 import task
 
-# Create new task class
-class task:
-    def __init__(self, taskType, ticketNumber, location, issue, action, status):
-        self.taskType = taskType
-        self.ticketNumber = ticketNumber
-        self.location = location
-        self.issue = issue
-        self.action = action
-        self.status = status
-    
-    # Setters
-    def setType(newType):
-        global taskType
-        taskType = newType
-    def setTicketNumber(newTicketNumber):
-        global ticketNumber
-        ticketNumber = newTicketNumber
-    def setLocation(newLocation):
-        global location
-        location = newLocation
-    def setIssue(newIssue):
-        global issue
-        issue = newIssue
-    def setAction(newAction):
-        global action
-        action = newAction
-    def setStatus(newStatus):
-        global status
-        status = newStatus
 
-    # Getters
-    def getType():
-        global taskType
-        return taskType
-    def getTicketNumber():
-        global ticketNumber
-        return ticketNumber
-    def getLocation():
-        global location
-        return location
-    def getIssue():
-        global issue
-        return issue
-    def getAction():
-        global action
-        return action
-    def getStatus():
-        global status
-        return status
+# def addTaskToMaster(task, taskType, ticketNumber, location, issue, action, status):
+#     # Create task container that updates when new tasks are added to tasks list, and gives all details and information
+#     taskContainer = Frame(master, borderwidth=2)
+#     taskContainer.pack(pady = 10)
 
-    def addTaskToMaster(self, taskType, ticketNumber, location, issue, action, status):
-        # Create task container that updates when new tasks are added to tasks list, and gives all details and information
-        taskContainer = Frame(master, borderwidth=2)
-        taskContainer.pack(pady = 10)
+#     # Create task container content
+#     taskContainerContent = Frame(taskContainer)
+#     taskContainerContent.pack(pady = 10)
 
-        # Create task container content
-        taskContainerContent = Frame(taskContainer)
-        taskContainerContent.pack(pady = 10)
+#     # Create task container header
+#     taskContainerHeader = Frame(taskContainer)
+#     taskContainerHeader.pack(pady = 10)
 
-        # Create task container header
-        taskContainerHeader = Frame(taskContainer)
-        taskContainerHeader.pack(pady = 10)
-
-        # Create task container header labels
-        taskContainerHeaderType = Label(taskContainerHeader, text="Type")
-        taskContainerHeaderType.pack(side=LEFT, padx=10)
-        taskContainerHeaderTicketNumber = Label(taskContainerHeader, text="Ticket Number")
-        taskContainerHeaderTicketNumber.pack(side=LEFT, padx=10)
-        taskContainerHeaderLocation = Label(taskContainerHeader, text="Location")
-        taskContainerHeaderLocation.pack(side=LEFT, padx=10)
-        taskContainerHeaderIssue = Label(taskContainerHeader, text="Issue")
-        taskContainerHeaderIssue.pack(side=LEFT, padx=10)
-        taskContainerHeaderAction = Label(taskContainerHeader, text="Action")
-        taskContainerHeaderAction.pack(side=LEFT, padx=10)
-        taskContainerHeaderStatus = Label(taskContainerHeader, text="Status")
-        taskContainerHeaderStatus.pack(side=LEFT, padx=10)
+#     # Create task container header labels
+#     taskContainerHeaderType = Label(taskContainerHeader, text="Type")
+#     taskContainerHeaderType.pack(side=LEFT, padx=10)
+#     taskContainerHeaderTicketNumber = Label(taskContainerHeader, text="Ticket Number")
+#     taskContainerHeaderTicketNumber.pack(side=LEFT, padx=10)
+#     taskContainerHeaderLocation = Label(taskContainerHeader, text="Location")
+#     taskContainerHeaderLocation.pack(side=LEFT, padx=10)
+#     taskContainerHeaderIssue = Label(taskContainerHeader, text="Issue")
+#     taskContainerHeaderIssue.pack(side=LEFT, padx=10)
+#     taskContainerHeaderAction = Label(taskContainerHeader, text="Action")
+#     taskContainerHeaderAction.pack(side=LEFT, padx=10)
+#     taskContainerHeaderStatus = Label(taskContainerHeader, text="Status")
+#     taskContainerHeaderStatus.pack(side=LEFT, padx=10)
 
 
-        # Create task container content labels
-        taskContainerContentType = Label(taskContainerContent, text=taskType)
-        taskContainerContentType.pack(side=LEFT, padx=10)
-        taskContainerContentTicketNumber = Label(taskContainerContent, text=ticketNumber)
-        taskContainerContentTicketNumber.pack(side=LEFT, padx=10)
-        taskContainerContentLocation = Label(taskContainerContent, text=location)
-        taskContainerContentLocation.pack(side=LEFT, padx=10)
-        taskContainerContentIssue = Label(taskContainerContent, text=issue)
-        taskContainerContentIssue.pack(side=LEFT, padx=10)
-        taskContainerContentAction = Label(taskContainerContent, text=action)
-        taskContainerContentAction.pack(side=LEFT, padx=10)
-        taskContainerContentStatus = Label(taskContainerContent, text=status)
-        taskContainerContentStatus.pack(side=LEFT, padx=10)
+#     # Create task container content labels
+#     taskContainerContentType = Label(taskContainerContent, text=taskType)
+#     taskContainerContentType.pack(side=LEFT, padx=10)
+#     taskContainerContentTicketNumber = Label(taskContainerContent, text=ticketNumber)
+#     taskContainerContentTicketNumber.pack(side=LEFT, padx=10)
+#     taskContainerContentLocation = Label(taskContainerContent, text=location)
+#     taskContainerContentLocation.pack(side=LEFT, padx=10)
+#     taskContainerContentIssue = Label(taskContainerContent, text=issue)
+#     taskContainerContentIssue.pack(side=LEFT, padx=10)
+#     taskContainerContentAction = Label(taskContainerContent, text=action)
+#     taskContainerContentAction.pack(side=LEFT, padx=10)
+#     taskContainerContentStatus = Label(taskContainerContent, text=status)
+#     taskContainerContentStatus.pack(side=LEFT, padx=10)
 
-        # Create task container footer
-        taskContainerFooter = Frame(taskContainer)
-        taskContainerFooter.pack(pady = 10)
+#     # Create task container footer
+#     taskContainerFooter = Frame(taskContainer)
+#     taskContainerFooter.pack(pady = 10)
 
 # create a Tk() object
 master = Tk()
